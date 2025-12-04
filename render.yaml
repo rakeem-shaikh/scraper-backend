@@ -3,10 +3,10 @@ services:
     name: scraper-backend
     env: node
     region: oregon
-    plan: free
+    plan: standard
     rootDir: ./
-    buildCommand: npm install && npx playwright install --with-deps chromium && npm run build
-    startCommand: npm start
+    buildCommand: npm install && npm run build
+    startCommand: npx playwright install --with-deps chromium && npm start
     healthCheckPath: /
     envVars:
       - key: NODE_ENV
